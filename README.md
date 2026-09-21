@@ -10,7 +10,17 @@ fondo condicional por reglas y formato numérico regional determinista.
 
 ---
 
-## 1.0.0.38 (actual)
+## 1.0.0.40 (actual)
+- Nuevo control **Card border width** (tarjeta Card, bajo Card border, rango 0–20,
+  defecto **1**): el borde se dibuja solo si hay color elegido y ancho > 0.
+
+## 1.0.0.39
+- **Display Units** agrega **Percentage** (×100 + `%`, sin escalado K/M) y
+  **Currency** (conserva escalado, antepone el símbolo).
+- Nuevo campo **Currency symbol** (texto, defecto `$`) que **solo aparece**
+  cuando se elige Currency, sin filas redundantes permanentes.
+
+## 1.0.0.38
 - Radio de borde exterior e interior por defecto en **10**.
 - El borde del marco (`Card border`, 2 px) ahora nace redondeado.
 - Nota: el fondo gris cuadrado más externo lo dibuja Power BI (Background nativo);

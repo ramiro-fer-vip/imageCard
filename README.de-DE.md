@@ -12,7 +12,17 @@ regionaler Zahlenformatierung.
 
 ---
 
-## 1.0.0.38 (aktuell)
+## 1.0.0.40 (aktuell)
+- Neues Steuerelement **Card border width** (Karte „Card“, unter Card border,
+  Bereich 0–20, Standard **1**): Der Rahmen wird nur bei gewählter Farbe und Breite > 0 gezeichnet.
+
+## 1.0.0.39
+- **Display Units** erhält **Percentage** (×100 + `%`, ohne K/M-Skalierung) und
+  **Currency** (behält Skalierung, stellt das Symbol voran).
+- Neues Feld **Currency symbol** (Text, Standard `$`), das **nur erscheint**,
+  wenn Currency gewählt ist, ohne dauerhafte redundante Zeilen.
+
+## 1.0.0.38
 - Äußerer und innerer Eckenradius standardmäßig **10**.
 - Der Außenrahmen (`Card border`, 2 px) ist nun standardmäßig abgerundet.
 - Hinweis: Der äußerste eckige graue Rahmen wird von Power BI gezeichnet (nativer

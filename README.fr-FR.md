@@ -11,7 +11,17 @@ régional déterministe.
 
 ---
 
-## 1.0.0.38 (actuelle)
+## 1.0.0.40 (actuelle)
+- Nouveau contrôle **Card border width** (carte Card, sous Card border, plage 0–20,
+  défaut **1**) : la bordure ne se dessine que si une couleur est choisie et largeur > 0.
+
+## 1.0.0.39
+- **Display Units** ajoute **Percentage** (×100 + `%`, sans échelle K/M) et
+  **Currency** (conserve l'échelle, préfixe le symbole).
+- Nouveau champ **Currency symbol** (texte, défaut `$`) qui **n'apparaît** que
+  si Currency est sélectionné, sans lignes redondantes permanentes.
+
+## 1.0.0.38
 - Rayons de bordure extérieur et intérieur par défaut à **10**.
 - La bordure du cadre extérieur (`Card border`, 2 px) est désormais arrondie par défaut.
 - Remarque : le cadre gris carré le plus externe est dessiné par Power BI

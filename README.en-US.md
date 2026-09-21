@@ -10,7 +10,17 @@ rule-based conditional background and deterministic regional number formatting.
 
 ---
 
-## 1.0.0.38 (current)
+## 1.0.0.40 (current)
+- New **Card border width** control (Card card, below Card border, range 0–20,
+  default **1**): the border draws only when a color is set and width > 0.
+
+## 1.0.0.39
+- **Display Units** adds **Percentage** (×100 + `%`, no K/M scaling) and
+  **Currency** (keeps scaling, prepends the symbol).
+- New **Currency symbol** field (text, default `$`) that **only appears**
+  when Currency is selected, with no permanent redundant rows.
+
+## 1.0.0.38
 - Outer and inner border radius default to **10**.
 - The outer frame border (`Card border`, 2 px) is now rounded by default.
 - Note: the outermost square gray frame is drawn by Power BI (native Background);
