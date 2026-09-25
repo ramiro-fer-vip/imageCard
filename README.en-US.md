@@ -10,7 +10,31 @@ rule-based conditional background and deterministic regional number formatting.
 
 ---
 
-## 1.0.0.40 (current)
+## 1.0.0.45 (current)
+- With no tooltip content (no Tooltips fields and no visible Color measure),
+  no tooltip appears on hover.
+
+## 1.0.0.44
+- Tooltips use the model format (`valueFormatter` per column + report culture);
+  the main measure no longer appears.
+- `powerbi-visuals-utils-formattingutils` pinned to ^6.1.2 (7.0.0 breaks
+  `pbiviz package`: its ESM locales file fails the `localizationLoader`).
+
+## 1.0.0.43
+- Show image master toggle (first in Image, on by default): off renders
+  a plain card with no image.
+
+## 1.0.0.42
+- Single measure with replace (`conditions` max:1) and role-based reads
+  (fixes Color measure mix-up).
+- Multiple Tooltips role (up to 10) + Tooltip card with Show color measure
+  toggle; hover tooltips.
+
+## 1.0.0.41
+- `powerbi-visuals-utils-formattingmodel` 6.0.4 → ^7.1.0, no code changes;
+  d3 leftovers pruned from `node_modules`.
+
+## 1.0.0.40
 - New **Card border width** control (Card card, below Card border, range 0–20,
   default **1**): the border draws only when a color is set and width > 0.
 

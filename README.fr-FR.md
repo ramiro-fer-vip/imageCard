@@ -11,7 +11,31 @@ régional déterministe.
 
 ---
 
-## 1.0.0.40 (actuelle)
+## 1.0.0.45 (actuelle)
+- Sans contenu d'infobulle (aucun champ Tooltips ni Color measure visible),
+  aucune infobulle au survol.
+
+## 1.0.0.44
+- Infobulles au format du modèle (`valueFormatter` par colonne + culture du
+  rapport) ; la mesure principale n'apparaît plus.
+- `powerbi-visuals-utils-formattingutils` fixé à ^6.1.2 (la 7.0.0 casse
+  `pbiviz package` : son fichier de locales ESM échoue au `localizationLoader`).
+
+## 1.0.0.43
+- Interrupteur maître Show image (premier dans Image, activé par défaut) :
+  désactivé, carte simple sans image.
+
+## 1.0.0.42
+- Mesure unique avec remplacement (`conditions` max:1) et lectures par rôle
+  (corrige la confusion Color measure).
+- Rôle Tooltips multiple (jusqu'à 10) + carte Tooltip avec interrupteur
+  Show color measure ; infobulles au survol.
+
+## 1.0.0.41
+- `powerbi-visuals-utils-formattingmodel` 6.0.4 → ^7.1.0, sans changement
+  de code ; restes d3 purgés de `node_modules`.
+
+## 1.0.0.40
 - Nouveau contrôle **Card border width** (carte Card, sous Card border, plage 0–20,
   défaut **1**) : la bordure ne se dessine que si une couleur est choisie et largeur > 0.
 

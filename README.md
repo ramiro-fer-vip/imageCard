@@ -10,7 +10,31 @@ fondo condicional por reglas y formato numérico regional determinista.
 
 ---
 
-## 1.0.0.40 (actual)
+## 1.0.0.45 (actual)
+- Sin contenido de tooltip (sin campos en Tooltips y sin Color measure visible),
+  no aparece tooltip al pasar el cursor.
+
+## 1.0.0.44
+- Tooltips con el formato del modelo (`valueFormatter` por columna + cultura del
+  informe); la medida principal ya no aparece.
+- `powerbi-visuals-utils-formattingutils` fijado en ^6.1.2 (la 7.0.0 rompe
+  `pbiviz package`: su archivo de locales ESM no pasa el `localizationLoader`).
+
+## 1.0.0.43
+- Interruptor maestro Show image (primero en Image, activado por defecto):
+  desactivado, tarjeta normal sin imagen.
+
+## 1.0.0.42
+- Medida única con reemplazo (`conditions` max:1) y lectura por rol
+  (corrige la confusión con Color measure).
+- Rol Tooltips múltiple (hasta 10) + tarjeta Tooltip con interruptor
+  Show color measure; tooltips al pasar el cursor.
+
+## 1.0.0.41
+- `powerbi-visuals-utils-formattingmodel` 6.0.4 → ^7.1.0, sin cambios de código;
+  limpieza de restos d3 de `node_modules`.
+
+## 1.0.0.40
 - Nuevo control **Card border width** (tarjeta Card, bajo Card border, rango 0–20,
   defecto **1**): el borde se dibuja solo si hay color elegido y ancho > 0.
 

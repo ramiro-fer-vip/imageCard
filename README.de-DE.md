@@ -12,7 +12,31 @@ regionaler Zahlenformatierung.
 
 ---
 
-## 1.0.0.40 (aktuell)
+## 1.0.0.45 (aktuell)
+- Ohne Tooltip-Inhalt (keine Tooltips-Felder, keine sichtbare Farbkennzahl)
+  erscheint keine QuickInfo beim Darüberfahren.
+
+## 1.0.0.44
+- QuickInfos im Modellformat (`valueFormatter` pro Spalte + Berichtskultur);
+  die Hauptkennzahl erscheint nicht mehr.
+- `powerbi-visuals-utils-formattingutils` auf ^6.1.2 fixiert (7.0.0 bricht
+  `pbiviz package`: ESM-Locale-Datei scheitert am `localizationLoader`).
+
+## 1.0.0.43
+- Hauptschalter Show image (erster in Image, standardmäßig ein): Aus blendet
+  das Bild aus, einfache Karte.
+
+## 1.0.0.42
+- Einzelne Kennzahl mit Ersetzen (`conditions` max:1) und rollenbasiertes Lesen
+  (behebt Farbkennzahl-Verwechslung).
+- Mehrfache Tooltips-Rolle (bis 10) + Tooltip-Karte mit Schalter Show color
+  measure; Hover-QuickInfos.
+
+## 1.0.0.41
+- `powerbi-visuals-utils-formattingmodel` 6.0.4 → ^7.1.0, keine Codeänderungen;
+  d3-Reste aus `node_modules` entfernt.
+
+## 1.0.0.40
 - Neues Steuerelement **Card border width** (Karte „Card“, unter Card border,
   Bereich 0–20, Standard **1**): Der Rahmen wird nur bei gewählter Farbe und Breite > 0 gezeichnet.
 

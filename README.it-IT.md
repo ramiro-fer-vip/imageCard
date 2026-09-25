@@ -12,7 +12,41 @@ regionale deterministica.
 
 ---
 
-## 1.0.0.38 (corrente)
+## 1.0.0.45 (corrente)
+- Senza contenuto tooltip (nessun campo Tooltips né Color measure visibile),
+  nessun tooltip al passaggio.
+
+## 1.0.0.44
+- Tooltip nel formato del modello (`valueFormatter` per colonna + cultura del
+  report); la misura principale non appare più.
+- `powerbi-visuals-utils-formattingutils` fissato a ^6.1.2 (la 7.0.0 rompe
+  `pbiviz package`: il file locales ESM fallisce il `localizationLoader`).
+
+## 1.0.0.43
+- Interruttore principale Show image (primo in Image, attivo per impostazione):
+  disattivo, scheda semplice senza immagine.
+
+## 1.0.0.42
+- Misura singola con sostituzione (`conditions` max:1) e letture per ruolo
+  (corregge confusione Color measure).
+- Ruolo Tooltips multiplo (fino a 10) + scheda Tooltip con interruttore
+  Show color measure; tooltip al passaggio.
+
+## 1.0.0.41
+- `powerbi-visuals-utils-formattingmodel` 6.0.4 → ^7.1.0, nessuna modifica
+  al codice; resti d3 rimossi da `node_modules`.
+
+## 1.0.0.40
+- Nuovo controllo **Card border width** (scheda Card, sotto Card border, intervallo 0–20,
+  predefinito **1**): il bordo si disegna solo con colore scelto e larghezza > 0.
+
+## 1.0.0.39
+- **Display Units** aggiunge **Percentage** (×100 + `%`, senza scala K/M) e
+  **Currency** (conserva la scala, antepone il simbolo).
+- Nuovo campo **Currency symbol** (testo, predefinito `$`) che **appare solo**
+  quando si sceglie Currency, senza righe ridondanti permanenti.
+
+## 1.0.0.38
 - Raggio bordo esterno e interno predefiniti a **10**.
 - Il bordo della cornice esterna (`Card border`, 2 px) ora nasce arrotondato.
 - Nota: la cornice grigia quadrata più esterna è disegnata da Power BI (sfondo
