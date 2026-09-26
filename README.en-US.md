@@ -1,5 +1,7 @@
 # ImageCard — Changelog
 
+![Tarjeta con gráfico y texto](images/ImageCard.jpg)
+
 KPI card for Power BI with measure, positionable image, singular/plural label,
 rule-based conditional background and deterministic regional number formatting.
 
