@@ -1,5 +1,7 @@
 # ImageCard — Registro delle modifiche
 
+![Tarjeta con gráfico y texto](images/ImageCard.jpg)
+
 Scheda KPI per Power BI con misura, immagine posizionabile, etichetta
 singolare/plurale, sfondo condizionale basato su regole e formattazione numerica
 regionale deterministica.
