@@ -1,5 +1,7 @@
 # ImageCard — Änderungsprotokoll
 
+![Tarjeta con gráfico y texto](images/ImageCard.jpg)
+
 KPI-Karte für Power BI mit Kennzahl, positionierbarem Bild, Singular-/Plural-
 Bezeichnung, regelbasiertem bedingtem Hintergrund und deterministischer
 regionaler Zahlenformatierung.
