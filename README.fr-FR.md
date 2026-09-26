@@ -1,5 +1,5 @@
 # ImageCard — Journal des modifications
-
+![Tarjeta con gráfico y texto](images/ImageCard.jpg)
 Carte KPI pour Power BI avec mesure, image positionnable, étiquette
 singulier/pluriel, arrière-plan conditionnel par règles et format numérique
 régional déterministe.
