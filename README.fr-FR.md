@@ -1,5 +1,5 @@
 # ImageCard — Journal des modifications
-![Tarjeta con gráfico y texto](images/ImageCard.jpg)
+
 Carte KPI pour Power BI avec mesure, image positionnable, étiquette
 singulier/pluriel, arrière-plan conditionnel par règles et format numérique
 régional déterministe.
@@ -11,7 +11,45 @@ régional déterministe.
 
 ---
 
-## 1.0.0.45 (actuelle)
+## 1.0.0.70 (actuelle)
+- Règles KPI regroupées dans une seule carte **KPI Color** : chaque groupe
+  de règle contient désormais Background color, Image color, Value color et
+  Label color (remplace les cartes séparées KPI Color - BG / Labels /
+  Image). Les rapports enregistrés avec les anciennes cartes conservent
+  leurs couleurs (lecture en chaîne avec repli).
+- Les règles s'activent par la plage seule : Value, Label et Image peuvent
+  être définis sans couleur de fond (fond vide renvoie à la couleur de fond
+  par défaut).
+- « Image replacement color » renommé « Image color » dans chaque règle.
+- Position de l'image restaurée : le contrôle applique maintenant la classe
+  CSS correcte (sans tenir compte de la casse) et nettoie les classes
+  obsolètes à chaque rendu. Top centre l'image horizontalement au-dessus du
+  texte ; Bottom la place sous le texte.
+
+## 1.0.0.69
+- Correction du scintillement de l'image : l'élément `<img>` et sa source
+  sont mis en cache et réutilisés entre les rendus ; les changements de
+  couleur KPI retraitent l'image sans clignotement (URL d'origine et
+  couleur de remplacement suivis séparément).
+- Corrections d'ajustement du texte (accolade manquante, variable scope
+  indéfinie) dans la boucle de réduction responsive.
+
+## 1.0.0.46 – 1.0.0.68
+- Format de date détecté automatiquement depuis le rôle Mesure : date seule
+  ou date-heure via **Include time**, **Power BI value** et **Time zone** ;
+  format du modèle respecté, formatage manuel indépendant de la langue.
+- Bascules **Wrap text** et listes d'alignement (Gauche/Centre/Droite)
+  pour la valeur et le libellé.
+- Bascules **Show Label** et **Show Plural** (activées par défaut).
+- **Image padding** par côté (haut/droite/bas/gauche, défaut 4).
+- Sous-classe sûre des listes déroulantes évitant les entrées vides
+  issues de valeurs persistées inconnues.
+- Nombres des infobulles formatés avec le format du modèle
+  (`valueFormatter`).
+- Persistance de l'image par clic-à-remplacer (uniquement en mode
+  conception).
+
+## 1.0.0.45
 - Sans contenu d'infobulle (aucun champ Tooltips ni Color measure visible),
   aucune infobulle au survol.
 

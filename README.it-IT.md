@@ -1,7 +1,5 @@
 # ImageCard — Registro delle modifiche
 
-![Tarjeta con gráfico y texto](images/ImageCard.jpg)
-
 Scheda KPI per Power BI con misura, immagine posizionabile, etichetta
 singolare/plurale, sfondo condizionale basato su regole e formattazione numerica
 regionale deterministica.
@@ -14,7 +12,47 @@ regionale deterministica.
 
 ---
 
-## 1.0.0.45 (corrente)
+## 1.0.0.70 (corrente)
+- Regole KPI raggruppate in un'unica scheda **KPI Color**: ogni gruppo di
+  regola contiene ora Background color, Image color, Value color e Label
+  color (sostituisce le schede separate KPI Color - BG / Labels / Image).
+  I report salvati con le schede precedenti mantengono i colori (lettura
+  concatenata con fallback).
+- Le regole si attivano per intervallo soltanto: Value, Label e Image
+  possono essere impostati senza definire un colore di sfondo (sfondo
+  vuoto torna al colore di sfondo predefinito).
+- "Image replacement color" rinominato "Image color" in ogni regla.
+- Posizione immagine ripristinata: il controllo ora applica la classe CSS
+  corretta (senza distinzione maiuscole/minuscole) e rimuove le classi
+  obsolete a ogni rendering. Top centra l'immagine orizzontalmente sopra
+  il testo; Bottom la posiziona sotto il testo.
+
+## 1.0.0.69
+- Correzione del lampeggio dell'immagine: l'elemento `<img>` e la sua
+  sorgente vengono memorizzati e riutilizzati tra i rendering; le
+  modifiche di colore KPI rielaborano l'immagine senza lampeggio (URL
+  originale e colore di sostituzione tracciati separatamente).
+- Correzioni di adattamento testo (parentesi mancante, variabile scope
+  indefinita) nel ciclo di riduzione responsivo.
+
+## 1.0.0.46 – 1.0.0.68
+- Formattazione data rilevata automaticamente dal ruolo Misura: solo data
+  o data e ora tramite **Include time**, **Power BI value** e **Time
+  zone**; formato del modello rispettato, formattazione manuale
+  indipendente dalla lingua.
+- Interruttori **Wrap text** e menu di allineamento
+  (Sinistra/Centro/Destra) per valore ed etichetta.
+- Interruttori **Show Label** e **Show Plural** (attivi per impostazione
+  predefinita).
+- **Image padding** per lato (alto/destra/basso/sinistra, predefinito 4).
+- Sottoclasse sicura dei menu a tendina che evita voci vuote da valori
+  memorizzati sconosciuti.
+- Numeri dei tooltip formattati con il formato del modello
+  (`valueFormatter`).
+- Persistenza immagine con clic-per-sostituire (solo in modalità
+  progettazione).
+
+## 1.0.0.45
 - Senza contenuto tooltip (nessun campo Tooltips né Color measure visibile),
   nessun tooltip al passaggio.
 

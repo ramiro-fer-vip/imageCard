@@ -1,7 +1,5 @@
 # ImageCard — Changelog
 
-![Tarjeta con gráfico y texto](images/ImageCard.jpg)
-
 KPI card for Power BI with measure, positionable image, singular/plural label,
 rule-based conditional background and deterministic regional number formatting.
 
@@ -12,7 +10,40 @@ rule-based conditional background and deterministic regional number formatting.
 
 ---
 
-## 1.0.0.45 (current)
+## 1.0.0.70 (current)
+- KPI color rules consolidated into a single **KPI Color** card: each rule
+  group now contains Background color, Image color, Value color and Label
+  color (replaces the separate KPI Color - BG / Labels / Image cards).
+  Reports saved with the old cards keep their colors (chained read fallback).
+- Rules activate by range alone: Value, Label and Image colors can be set
+  without defining a background color (empty background falls back to
+  Default background color).
+- "Image replacement color" renamed to "Image color" in every rule.
+- Image position restored: the control now applies the correct CSS class
+  (case-insensitive) and clears stale ones on every render. Top centers the
+  image horizontally above the text; Bottom places it below the text.
+
+## 1.0.0.69
+- Image flicker fix: the `<img>` element and its source are cached and
+  reused across renders; KPI color changes reprocess the image without
+  flashing (original URL and replacement color tracked separately).
+- Text-fit fixes (missing brace, undefined scope variable) in the
+  responsive shrink loop.
+
+## 1.0.0.46 – 1.0.0.68
+- Date formatting auto-detected from the Measure role: date-only or
+  date-time via **Include time**, **Power BI value** and **Time zone**
+  controls; model format respected, manual locale-independent formatting.
+- **Wrap text** toggles and text alignment dropdowns (Left/Center/Right)
+  for value and label.
+- **Show Label** and **Show Plural** toggles (on by default).
+- Per-side **Image padding** (top/right/bottom/left, default 4).
+- Safe dropdown subclass preventing blank entries from unknown persisted
+  values.
+- Tooltip numbers formatted with the model format (`valueFormatter`).
+- Image persistence via click-to-replace (design mode only).
+
+## 1.0.0.45
 - With no tooltip content (no Tooltips fields and no visible Color measure),
   no tooltip appears on hover.
 

@@ -1,7 +1,5 @@
 # ImageCard — Registro de cambios
 
-![Tarjeta con gráfico y texto](images/ImageCard.jpg)
-
 Tarjeta KPI para Power BI con medida, imagen posicionable, etiqueta singular/plural,
 fondo condicional por reglas y formato numérico regional determinista.
 
@@ -12,7 +10,45 @@ fondo condicional por reglas y formato numérico regional determinista.
 
 ---
 
-## 1.0.0.45 (actual)
+## 1.0.0.70 (actual)
+- Reglas KPI consolidadas en una sola tarjeta **KPI Color**: cada grupo de
+  regla ahora contiene Background color, Image color, Value color y Label
+  color (reemplaza las tarjetas separadas KPI Color - BG / Labels / Image).
+  Los informes guardados con las tarjetas antiguas conservan sus colores
+  (lectura en cadena con respaldo).
+- Las reglas se activan solo por rango: Value, Label e Image se pueden
+  configurar sin definir un color de fondo (fondo vacío cae al
+  Background color por defecto).
+- "Image replacement color" renombrado a "Image color" en cada regla.
+- Posición de imagen restaurada: el control ahora aplica la clase CSS
+  correcta (sin distinguir mayúsculas) y limpia las clases obsoletas en
+  cada render. Top centra la imagen horizontalmente sobre el texto; Bottom
+  la coloca debajo del texto.
+
+## 1.0.0.69
+- Corrección del parpadeo de imagen: el elemento `<img>` y su fuente se
+  cachean y reutilizan entre renders; los cambios de color KPI reprocesan
+  la imagen sin destello (URL original y color de reemplazo rastreados
+  por separado).
+- Correcciones de ajuste de texto (llave faltante, variable scope
+  indefinida) en el bucle de reducción responsive.
+
+## 1.0.0.46 – 1.0.0.68
+- Formato de fecha detectado automáticamente desde el rol Medida:
+  solo fecha o fecha y hora mediante **Include time**, **Power BI value**
+  y **Time zone**; respeta el formato del modelo, formato manual
+  independiente del idioma.
+- Toggles **Wrap text** y desplegables de alineación (Izquierda/Centro/
+  Derecha) para valor y etiqueta.
+- Toggles **Show Label** y **Show Plural** (activados por defecto).
+- **Image padding** por lado (arriba/derecha/abajo/izquierda, defecto 4).
+- Subclase segura de desplegables que evita entradas vacías por valores
+  persistidos desconocidos.
+- Números de tooltip formateados con el formato del modelo
+  (`valueFormatter`).
+- Persistencia de imagen con clic-para-reemplazar (solo modo edición).
+
+## 1.0.0.45
 - Sin contenido de tooltip (sin campos en Tooltips y sin Color measure visible),
   no aparece tooltip al pasar el cursor.
 

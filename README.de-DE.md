@@ -1,7 +1,5 @@
 # ImageCard — Änderungsprotokoll
 
-![Tarjeta con gráfico y texto](images/ImageCard.jpg)
-
 KPI-Karte für Power BI mit Kennzahl, positionierbarem Bild, Singular-/Plural-
 Bezeichnung, regelbasiertem bedingtem Hintergrund und deterministischer
 regionaler Zahlenformatierung.
@@ -14,7 +12,44 @@ regionaler Zahlenformatierung.
 
 ---
 
-## 1.0.0.45 (aktuell)
+## 1.0.0.70 (aktuell)
+- KPI-Regelfarben in einer einzigen **KPI Color**-Karte zusammengefasst:
+  Jede Regelgruppe enthält nun Background color, Image color, Value color
+  und Label color (ersetzt die getrennten KPI Color - BG / Labels /
+  Image-Karten). Berichte, die mit den alten Karten gespeichert wurden,
+  behalten ihre Farben (geketteter Lese-Fallback).
+- Regeln werden allein durch den Bereich aktiviert: Value, Label und Image
+  können ohne Hintergrundfarbe gesetzt werden (leerer Hintergrund fällt auf
+  die Standard-Hintergrundfarbe zurück).
+- „Image replacement color" in jeder Regel in „Image color" umbenannt.
+- Bildposition wiederhergestellt: Die Steuerung wendet jetzt die richtige
+  CSS-Klasse an (ohne Beachtung der Groß-/Kleinschreibung) und entfernt
+  veraltete Klassen bei jedem Rendering. Top zentriert das Bild horizontal
+  über dem Text; Bottom platziert es unter dem Text.
+
+## 1.0.0.69
+- Korrektur des Bildflackerns: Das `<img>`-Element und seine Quelle werden
+  zwischengespeichert und zwischen den Renderings wiederverwendet;
+  KPI-Farbänderungen verarbeiten das Bild ohne Flackern neu (Original-URL
+  und Ersetzungsfarbe werden getrennt nachverfolgt).
+- Korrekturen der Textanpassung (fehlende Klammer, undefinierte
+  scope-Variable) in der responsiven Verkleinerungsschleife.
+
+## 1.0.0.46 – 1.0.0.68
+- Datumsformatierung automatisch aus der Measure-Rolle erkannt: nur Datum
+  oder Datum und Uhrzeit über **Include time**, **Power BI value** und
+  **Time Zone**; Modellformat wird respektiert, manuelle formatunabhängige
+  Darstellung.
+- **Wrap text**-Schalter und Ausrichtungs-Auswahllisten (Links/Mitte/Rechts)
+  für Wert und Beschriftung.
+- **Show Label**- und **Show Plural**-Schalter (standardmäßig aktiviert).
+- **Image padding** pro Seite (oben/rechts/unten/links, Standard 4).
+- Sichere Dropdown-Unterklasse verhindert leere Einträge aus unbekannten
+  gespeicherten Werten.
+- Tooltip-Zahlen mit dem Modellformat formatiert (`valueFormatter`).
+- Bildpersistenz per Klick-zum-Ersetzen (nur im Entwurfsmodus).
+
+## 1.0.0.45
 - Ohne Tooltip-Inhalt (keine Tooltips-Felder, keine sichtbare Farbkennzahl)
   erscheint keine QuickInfo beim Darüberfahren.
 
