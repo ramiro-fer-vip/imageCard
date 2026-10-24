@@ -47,7 +47,16 @@ Zahlenformatierung.
 
 ## Änderungsprotokoll
 
-### 1.0.0.70 (aktuell)
+### 1.0.0.71 (aktuell)
+- **Data labels · Display Units Auto:** berücksichtigt nun auch das
+  Modellformat. Eine prozentual formatierte Measure wird als Prozentwert
+  angezeigt (0,25 → 25 %), und eine Währungs-Measure stellt das Modellsymbol
+  voran ($ € £ ¥ …), einschließlich der Formate `[$€-es-ES]`, `[$USD-409]`
+  und `[$-409]` (letzteres greift auf das Feld Currency symbol zurück).
+  Reine Zahlen behalten die automatische K/M/B/T-Skalierung; die
+  automatische Text- und Datumserkennung bleibt unverändert.
+
+### 1.0.0.70
 - KPI-Regelfarben in einer einzigen **KPI Color**-Karte zusammengefasst:
   Jede Regelgruppe enthält nun Background color, Image color, Value color
   und Label color (ersetzt die getrennten KPI Color - BG / Labels /

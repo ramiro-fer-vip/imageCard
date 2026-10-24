@@ -43,7 +43,15 @@ rule-based conditional colors and deterministic regional number formatting.
 
 ## Changelog
 
-### 1.0.0.70 (current)
+### 1.0.0.71 (current)
+- **Data labels · Display Units Auto:** now also honors the model format. A
+  percentage measure renders as a percentage (0.25 → 25%) and a currency
+  measure prefixes the model symbol ($ € £ ¥ …), including the `[$€-es-ES]`,
+  `[$USD-409]` and `[$-409]` formats (the latter falls back to the Currency
+  symbol setting). Plain numbers keep the K/M/B/T auto-scaling, and the text
+  and date auto-detection is unchanged.
+
+### 1.0.0.70
 - KPI color rules consolidated into a single **KPI Color** card: each rule
   group now contains Background color, Image color, Value color and Label
   color (replaces the separate KPI Color - BG / Labels / Image cards).

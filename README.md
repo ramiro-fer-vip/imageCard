@@ -43,7 +43,16 @@ colores condicionales por reglas y formato numérico regional determinista.
 
 ## Registro de cambios
 
-### 1.0.0.70 (actual)
+### 1.0.0.71 (actual)
+- **Data labels · Display Units Auto:** ahora también respeta el formato del
+  modelo. Una medida formateada como porcentaje se muestra como porcentaje
+  (0,25 → 25%) y una medida de moneda antepone el símbolo del modelo
+  ($ € £ ¥ …), incluidos los formatos `[$€-es-ES]`, `[$USD-409]` y `[$-409]`
+  (este último recurre al campo Currency symbol). Los números sin formato
+  conservan el escalado automático K/M/B/T y la detección automática de texto
+  y fechas no cambia.
+
+### 1.0.0.70
 - Reglas KPI consolidadas en una sola tarjeta **KPI Color**: cada grupo de
   regla ahora contiene Background color, Image color, Value color y Label
   color (reemplaza las tarjetas separadas KPI Color - BG / Labels / Image).

@@ -45,7 +45,16 @@ couleurs conditionnelles par règles et format numérique régional déterminist
 
 ## Journal des modifications
 
-### 1.0.0.70 (actuelle)
+### 1.0.0.71 (actuelle)
+- **Data labels · Display Units Auto :** respecte désormais aussi le format
+  du modèle. Une mesure au format pourcentage s'affiche en pourcentage
+  (0,25 → 25 %) et une mesure monétaire préfixe le symbole du modèle
+  ($ € £ ¥ …), y compris les formats `[$€-es-ES]`, `[$USD-409]` et `[$-409]`
+  (ce dernier utilise le champ Currency symbol). Les nombres simples
+  conservent la mise à l'échelle automatique K/M/B/T et la détection
+  automatique du texte et des dates reste inchangée.
+
+### 1.0.0.70
 - Règles KPI regroupées dans une seule carte **KPI Color** : chaque groupe
   de règle contient désormais Background color, Image color, Value color et
   Label color (remplace les cartes séparées KPI Color - BG / Labels /

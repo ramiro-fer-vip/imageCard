@@ -47,7 +47,16 @@ deterministica.
 
 ## Registro delle modifiche
 
-### 1.0.0.70 (corrente)
+### 1.0.0.71 (corrente)
+- **Data labels · Display Units Auto:** ora rispetta anche il formato del
+  modello. Una misura formattata come percentuale viene mostrata in
+  percentuale (0,25 → 25%) e una misura di valuta antepone il simbolo del
+  modello ($ € £ ¥ …), inclusi i formati `[$€-es-ES]`, `[$USD-409]` e
+  `[$-409]` (quest'ultimo ricorre al campo Currency symbol). I numeri senza
+  formato mantengono il ridimensionamento automatico K/M/B/T e il
+  rilevamento automatico di testo e date resta invariato.
+
+### 1.0.0.70
 - Regole KPI raggruppate in un'unica scheda **KPI Color**: ogni gruppo di
   regola contiene ora Background color, Image color, Value color e Label
   color (sostituisce le schede separate KPI Color - BG / Labels / Image).
